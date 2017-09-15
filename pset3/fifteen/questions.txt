@@ -1,0 +1,4 @@
+0. TODO init
+1. TODO draw
+2. TODO move
+3. TODO won
