@@ -1,0 +1,23 @@
+0.  What is pneumonoultramicroscopicsilicovolcanoconiosis?
+    It is the longest world in Oxford dictionary. It refers to lung disease caused by inhaling very find ash and sand dust.
+
+1.  According to its man page, what does getrusage do?
+    Returns resource usage measures for self, children, thread.
+
+2.  Per that same man page, how many members are in a variable of type struct rusage?
+    There are 16 variables of type struct rusage.
+
+3.  Why do you think we pass before and after by reference (instead of by value) to calculate, even though we’re not changing their contents?
+    If the before and after were passed by value that will take more time and memory.
+
+4.  Explain as precisely as possible, in a paragraph or more, how main goes about reading words from a file. In other words, convince us that you indeed understand how that function’s for loop works.
+    Main starts with reading each file and then iterates over each character until the EOF. Main then checks that character is either a letter (isalpha) or not ('\''). If the characters passes the checks it is being added to word array.
+    Then it checks the lenght of the alphabetical strings, if it's too long it means it's not a word and the index is set to 0. The next else if checks for numbers, if any found index is set to zero.
+    When the all esle if are passed, it adds '\0' to the end of the word and updates the counter.
+    Than a spellchecks starts. If word was misspelled error message will be printed to the terminal. After that the index is set to 0 and looks for another word until EOF.
+
+5.  Why do you think we used fgetc to read each word’s characters one at a time rather than use fscanf with a format string like "%s" to read whole words at a time? Put another way, what problems might arise by relying on fscanf alone?
+    We already checked if each character is a letter so fgetc is more efficient.
+
+6.  Why do you think we declared the parameters for check and load as const (which means "constant")?
+    We only want to read them and declaring them as const will stop us from changing them.
